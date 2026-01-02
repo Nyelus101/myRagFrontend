@@ -61,7 +61,7 @@ export default function KnowledgeManager({ onSuccessfulUpload }: KnowledgeManage
                         />
                         <FileText className="w-10 h-10 text-slate-400 mx-auto mb-4"/>
                         <p className="text-sm font-medium text-slate-700">Drop PDF here or click to browse</p>
-                        <p className="text-xs text-slate-400 mt-2">Supports PDF, TXT (Max 20MB per file)</p>
+                        <p className="text-xs text-slate-400 mt-2">Supports PDF, TXT (Max 10MB per file)</p>
                     </>
                 )}
             </div>

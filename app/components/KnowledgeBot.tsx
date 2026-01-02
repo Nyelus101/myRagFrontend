@@ -79,7 +79,7 @@ export default function KnowledgeBot() {
         <div className="flex flex-col h-screen bg-slate-50 text-slate-900 font-sans">
             <Header view={view} isAuthenticated={isAuthenticated} setView={setView} />
 
-            <main className="flex-1 overflow-hidden relative flex flex-col">
+            <main className="flex-1 overflow-scroll relative flex flex-col">
                 {view === 'chat' && (
                     <ChatView
                         mode={mode}
