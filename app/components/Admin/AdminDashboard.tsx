@@ -4,6 +4,8 @@ import { getAdminStats, clearStorage } from '../../lib/api/knowledgeBotApi';
 import { AdminStats } from '../../lib/types';
 import KnowledgeManager from './KnowledgeManager';
 import { LogOut, Loader, Database, FileText, Trash2 } from 'lucide-react';
+import { VectorSearchSkeleton } from '../vector-search-skeleton';
+
 
 interface AdminDashboardProps {
     setIsAuthenticated: (auth: boolean) => void;
@@ -98,8 +100,9 @@ export default function AdminDashboard({ setIsAuthenticated }: AdminDashboardPro
                     </h3>
 
                     {loadingStats ? (
-                        <div className="flex items-center justify-center h-48">
-                            <Loader className="w-6 h-6 animate-spin text-indigo-600" />
+                        <div className="flex items-center justify-center">
+                            {/* <Loader className="w-6 h-6 animate-spin text-indigo-600" /> */}
+                            <VectorSearchSkeleton className='w-full h-full' />
                         </div>
                     ) : (
                         <div className="space-y-4">
